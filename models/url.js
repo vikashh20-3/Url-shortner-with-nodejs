@@ -1,10 +1,16 @@
-const mongoose =require("mongoose")
+const mongoose = require("mongoose")
 
-const urlSchema=new mongoose.Schema({
-    shortId:{
-        type:String,
+const urlSchema = new mongoose.Schema({
+    shortId: {
+        type: String,
         required: true,
-        unique:true
+        unique: true
     },
-    
+    redirectURL: {
+        type: String,
+        required: true
+    },
+    visitHistory: [{
+        timestamp: { type: number }
+    }],
 })
