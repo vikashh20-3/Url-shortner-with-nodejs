@@ -9,7 +9,7 @@ async function handlegenerateNewShortUrl(request, response) {
         shortId: shortID,
         redirectURL: body.url,
         visitHistory: []
-    })
+    })``
 
     return response.json({ id: shortID })
 
